@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Episode_Roulette" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Number of Seasons" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukC-us-AbA" userLabel="Label - Seasons">
+                                <rect key="frame" x="234" y="175" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hA-Cd-RYa" userLabel="Input - Seasons" customClass="NumericInputTextField" customModule="Episode_Roulette" customModuleProvider="target">
+                                <rect key="frame" x="327" y="315" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Episodes Per Season" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaW-1M-bDa" userLabel="Label - Episodes">
+                                <rect key="frame" x="406" y="377" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ufq-yl-d0T" userLabel="Input - Episodes" customClass="NumericInputTextField" customModule="Episode_Roulette" customModuleProvider="target">
+                                <rect key="frame" x="406" y="426" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5k-Yj-Rtv" userLabel="Submit">
+                                <rect key="frame" x="431" y="493" width="46" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eVR-vP-O9K" kind="show" identifier="SubmitTVShowInformation" id="0GW-s3-CjC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ufq-yl-d0T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="271" id="803-gP-A0N">
+                                <variation key="heightClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="ukC-us-AbA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="KrU-n7-bB3">
+                                <variation key="heightClass=regular" constant="16"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="YaW-1M-bDa" secondAttribute="centerX" id="QDl-lD-Mwd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ufq-yl-d0T" secondAttribute="trailing" constant="271" id="RHl-AC-DV5">
+                                <variation key="heightClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="5hA-Cd-RYa" secondAttribute="trailing" constant="271" id="UTR-gE-D2q">
+                                <variation key="heightClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="Ufq-yl-d0T" firstAttribute="top" secondItem="YaW-1M-bDa" secondAttribute="bottom" constant="8" id="WSA-7z-ywJ"/>
+                            <constraint firstItem="5hA-Cd-RYa" firstAttribute="top" secondItem="ukC-us-AbA" secondAttribute="bottom" constant="8" id="WvN-kR-Hzn"/>
+                            <constraint firstItem="5hA-Cd-RYa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="271" id="a10-hD-mLF">
+                                <variation key="heightClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="ukC-us-AbA" secondAttribute="centerX" id="f4x-2J-FYc"/>
+                            <constraint firstAttribute="centerX" secondItem="c5k-Yj-Rtv" secondAttribute="centerX" id="fM0-05-Jwp"/>
+                            <constraint firstItem="YaW-1M-bDa" firstAttribute="top" secondItem="5hA-Cd-RYa" secondAttribute="bottom" constant="8" id="hwg-7g-sfF">
+                                <variation key="heightClass=regular" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="c5k-Yj-Rtv" firstAttribute="top" secondItem="Ufq-yl-d0T" secondAttribute="bottom" constant="8" id="xbg-70-ILQ">
+                                <variation key="heightClass=regular" constant="16"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KrU-n7-bB3"/>
+                                <exclude reference="f4x-2J-FYc"/>
+                                <exclude reference="UTR-gE-D2q"/>
+                                <exclude reference="WvN-kR-Hzn"/>
+                                <exclude reference="a10-hD-mLF"/>
+                                <exclude reference="QDl-lD-Mwd"/>
+                                <exclude reference="hwg-7g-sfF"/>
+                                <exclude reference="803-gP-A0N"/>
+                                <exclude reference="RHl-AC-DV5"/>
+                                <exclude reference="WSA-7z-ywJ"/>
+                                <exclude reference="fM0-05-Jwp"/>
+                                <exclude reference="xbg-70-ILQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="KrU-n7-bB3"/>
+                                <include reference="f4x-2J-FYc"/>
+                                <include reference="UTR-gE-D2q"/>
+                                <include reference="WvN-kR-Hzn"/>
+                                <include reference="a10-hD-mLF"/>
+                                <include reference="QDl-lD-Mwd"/>
+                                <include reference="hwg-7g-sfF"/>
+                                <include reference="803-gP-A0N"/>
+                                <include reference="RHl-AC-DV5"/>
+                                <include reference="WSA-7z-ywJ"/>
+                                <include reference="fM0-05-Jwp"/>
+                                <include reference="xbg-70-ILQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="episodesTextBox" destination="Ufq-yl-d0T" id="4mF-fv-fNf"/>
+                        <outlet property="seasonsTextBox" destination="5hA-Cd-RYa" id="IxY-PG-Ze2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="221.25"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="BZF-t9-ONL">
+            <objects>
+                <viewController id="eVR-vP-O9K" customClass="ResultViewController" customModule="Episode_Roulette" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G4n-td-l6U"/>
+                        <viewControllerLayoutGuide type="bottom" id="K1S-KH-2ST"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qRR-aZ-xmK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gi-VZ-46T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1195" y="221.25"/>
+        </scene>
+    </scenes>
+</document>
